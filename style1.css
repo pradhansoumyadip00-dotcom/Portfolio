@@ -26,18 +26,16 @@ header {
   border-bottom: 3px solid #ffcc00;
   z-index: 1000;
   backdrop-filter: blur(10px);
-  position: fixed;  /* Keep it fixed */
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
 }
 
-/* When hidden, move header up */
 header.hide {
   transform: translateY(-120%);
 }
-
 
 header h1 {
   font-size: 3rem;
@@ -54,37 +52,92 @@ header h1 {
   100% { text-shadow: 0 0 10px #ffcc00; }
 }
 
-header ul {
-  list-style: none;
-  margin-top: 1rem;
+/* ---------------- Top Navigation ---------------- */
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 12px 0;
+  backdrop-filter: blur(8px);
 }
 
-header ul li {
-  margin: 0.3rem 0;
-  font-size: 1.1rem;
-}
-
-/* ---------------- Navigation ---------------- */
-nav {
-  margin-top: 1.5rem;
-}
-
-nav a {
+.top-nav a {
   color: #fff;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
-  font-size: 1.1rem;
-  padding: 10px 16px;
-  border-radius: 12px;
+  padding: 10px 15px;
+  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
-nav a:hover {
+.top-nav a:hover {
   background: linear-gradient(45deg, #ffcc00, #ff8800);
   color: #000;
-  box-shadow: 0 0 15px #ffcc00, 0 0 25px #ff8800;
-  transform: scale(1.05);
+  box-shadow: 0 0 12px #ffcc00, 0 0 20px #ff8800;
+}
+
+/* ---------------- Intro ---------------- */
+.intro {
+  margin: 140px auto 50px auto;
+  width: 90%;
+  max-width: 400px;
+  min-height: 350px;
+  background: rgba(0,0,0,0.7);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7), 0 0 25px rgba(255,204,0,0.4);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  overflow: hidden;
+}
+
+.intro:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 40px rgba(255,204,0,0.6);
+}
+
+.intro h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffcc00;
+  text-shadow: 0 0 8px #ffcc00, 0 0 20px #ff8800;
+  line-height: 1.3;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  0% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff8800; }
+  50% { text-shadow: 0 0 20px #ffcc00, 0 0 40px #ff8800; }
+  100% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff8800; }
+}
+
+.intro ul {
+  list-style: disc inside;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #fff;
+  text-shadow: 0 0 5px #ffcc00;
+}
+
+.intro ul li {
+  margin-bottom: 0.6rem;
+  padding-left: 6px;
+  border-left: 3px solid #ffcc00;
+  transition: all 0.3s ease;
+}
+
+.intro ul li:hover {
+  background: rgba(255,204,0,0.1);
+  color: #ffcc00;
+  transform: translateX(5px);
+  box-shadow: 0 0 8px #ffcc00;
 }
 
 /* ---------------- Sections ---------------- */
@@ -119,6 +172,31 @@ section h2 {
   display: inline-block;
   padding-bottom: 6px;
   text-shadow: 0 0 12px #ffcc00, 0 0 22px #ff8800;
+}
+
+section h3 {
+  font-size: 1.4rem;
+  color: #ffcc00;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-shadow: 0 0 6px #ffcc00, 0 0 12px #ff8800;
+}
+
+section h4 {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-style: italic;
+  text-shadow: 0 0 4px #ffcc00, 0 0 8px #ff8800;
+}
+
+.section-content p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #f9f9f9;
+  text-shadow: 0 0 4px #ffcc00;
 }
 
 /* ---------------- Table ---------------- */
@@ -161,25 +239,37 @@ table tr:hover {
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
+  gap: 25px;
+  justify-items: center;
+  align-items: start;
 }
 
-img {
+.image-grid img {
   width: 100%;
-  max-width: 250px;
+  max-width: 220px;
   height: auto;
   display: block;
-  margin: 12px auto;
   border-radius: 15px;
   border: 2px solid transparent;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   transition: all 0.5s ease;
 }
 
-img:hover {
+.image-grid img:hover {
   transform: scale(1.1) rotate(2deg);
   box-shadow: 0 10px 30px rgba(255, 204, 0, 0.8);
   border: 2px solid #ffcc00;
+}
+
+.image-item {
+  text-align: center;
+}
+
+.image-item p {
+  margin-top: 5px;
+  font-size: 0.95rem;
+  color: #ffcc00;
+  text-shadow: 0 0 6px #ffcc00, 0 0 12px #ff8800;
 }
 
 /* ---------------- Contact Form ---------------- */
@@ -280,118 +370,41 @@ footer p {
   box-shadow: 0 0 20px #ffcc00, 0 0 35px #ff8800;
 }
 
-/* ---------------- Top Navigation ---------------- */
-.top-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(0,0,0,0.8);
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 12px 0;
-    backdrop-filter: blur(8px);
+/* ---------------- About Section Image ---------------- */
+#about .image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
+#about .image-container img {
+  width: 250px; /* larger size */
+  height: 250px; /* make it square for perfect circle */
+  object-fit: cover; /* maintain aspect ratio and cover */
+  border-radius: 50%; /* circular shape */
+  border: 4px solid #ffcc00; /* golden border */
+  box-shadow: 0 10px 30px rgba(255, 204, 0, 0.5);
+  transition: all 0.5s ease;
+}
 
+#about .image-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(255, 204, 0, 0.8);
+  border-color: #ff8800;
+}
 
+.social-links {
+    margin: 10px 0;
+}
 
-.top-nav a {
+.social-links a {
+    color: #ffcc00;  /* icon color */
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
     color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.top-nav a:hover {
-    background: linear-gradient(45deg, #ffcc00, #ff8800);
-    color: #000;
-    box-shadow: 0 0 12px #ffcc00, 0 0 20px #ff8800;
-}
-
-/* ---------------- Header Container ---------------- */
-.header-container {
-    display: flex;
-    align-items: flex-start; /* align intro to top of logo */
-    justify-content: flex-start;
-    padding: 2rem 5%;
-    gap: 2rem;
-}
-
-/* Logo Styling */
-.logo {
-    flex-shrink: 0;
-}
-/* Add spacing to prevent intro from being hidden under fixed header */
-/* .intro {
-    margin-top: 80px; 
-} */
-
-.intro {
-    margin: 140px auto 50px auto; /* top margin for fixed header, auto horizontal centering, bottom spacing */
-    width: 90%; /* responsive width */
-    max-width: 400px; /* limit maximum width */
-    min-height: 350px;
-    background: rgba(0,0,0,0.7);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.7), 0 0 25px rgba(255,204,0,0.4);
-    backdrop-filter: blur(12px);
-    color: #fff;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    text-align: center; /* center content inside */
-    overflow: hidden;
-}
-
-
-
-
-/* Glowing hover effect */
-.intro:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 40px rgba(255,204,0,0.6);
-}
-
-/* Header inside intro */
-.intro h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #ffcc00;
-    text-shadow: 0 0 8px #ffcc00, 0 0 20px #ff8800;
-    line-height: 1.3;
-    animation: glowText 2s ease-in-out infinite alternate;
-}
-
-/* Glowing text animation */
-@keyframes glowText {
-    0% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff8800; }
-    50% { text-shadow: 0 0 20px #ffcc00, 0 0 40px #ff8800; }
-    100% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff8800; }
-}
-
-/* List inside intro */
-.intro ul {
-    list-style: disc inside;
-    line-height: 1.8;
-    font-size: 1.1rem;
-    color: #fff;
-    text-shadow: 0 0 5px #ffcc00;
-}
-
-/* Add small highlight effect on hover */
-.intro ul li {
-    margin-bottom: 0.6rem;
-    padding-left: 6px;
-    border-left: 3px solid #ffcc00;
-    transition: all 0.3s ease;
-}
-
-.intro ul li:hover {
-    background: rgba(255,204,0,0.1);
-    color: #ffcc00;
-    transform: translateX(5px);
-    box-shadow: 0 0 8px #ffcc00;
+    transform: scale(1.2);
 }

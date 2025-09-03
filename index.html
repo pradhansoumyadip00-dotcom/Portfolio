@@ -3,389 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soumyadip pradhan</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Soumyadip Pradhan</title>
+    <link rel="stylesheet" href="style1.css">
+    <!-- Add this in your <head> section for Font Awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQ0f+4r8T6i7zLMn8V5uN+nqHk5+YX4Y4wF3IUwZT9Gp2R+G4GgIvM3Vx7Q+qkGVXGp1Uz3Ec9El6LrJr3MpUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<style>
-    body {
-        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl5b-DPdMsanihLuDPN18O5QWZNdJlrmqHjw&s );
-        background-size:cover;
-        background-repeat: no-repeat;
-        background-position-x: center;
-    }
-    
-</style>
+<script src="script.js"></script>
+
 <body>
+    <!-- ---------------- Header ---------------- -->
     <header>
-        <header>
-    <h1 id="top">My First Website</h1>
-
-    <!-- Simple logo made with inline SVG (no external files needed) -->
-    <figure>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" width="180" height="60" role="img" aria-labelledby="logoTitle logoDesc">
-        <title id="logoTitle">Simple Logo</title>
-        <desc id="logoDesc">Rounded rectangle with M letter</desc>
-        <rect x="1" y="1" width="118" height="38" rx="8" ry="8" stroke="black" fill="none" />
-        <text x="60" y="26" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20">S`P</text>
-      </svg>
-      
-    </figure>
-
-        <h1>Hi i am Soumyadip pradhan</h1>
-        <ul type="*">
-            <LI> LPU Student</LI>
-            <LI> <cours:B class="tech"></cours:B> CSE (AI&ML)</LI>
-            <LI> Beginner web developer </LI>
-        </ul>
-        <nav>
+        <div class="top-nav">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#portfolio">Portfolio</a>
-            <a href="#Family">Family</a>
-            <a href="#Friends">Friends</a>
+            <a href="#family">Family</a>
+            <a href="#friends">Friends</a>
             <a href="#contact">Contact</a>
-        </nav>
-        <hr>
+        </div>
     </header>
+
+    <div class="intro">
+        <h1>Hello, I am Soumyadip Pradhan</h1>
+        <ul>
+            <li>LPU Student</li>
+            <li>Bachelor in CSE (AI & ML)</li>
+            <li>Beginner Web Developer</li>
+        </ul>
+    </div>
+
     <main>
+        <!-- ---------------- About ---------------- -->
         <section id="about">
-            <h2>About</h2>
-            <P>Hello! My self soumya. I am from west bangal.I am a student of LPU.  I am a not  hardworking  person .  my goal is Earnling money. I enjoy making simple page.</P>
-            <img src="/imege/me.jpeg" alt="soumya" height="200" width="100"> 
+            <div class="section-content">
+                <h2>About Me</h2>
+                <p>My name is Soumyadip Pradhan, and I am from West Bengal. I am currently pursuing my studies at LPU. I am passionate about web development and enjoy creating simple, functional websites. My ultimate goal is to build a rewarding career in technology.</p>
+                <div class="image-container">
+                    <img src="/imege/me.jpeg" alt="Soumyadip Pradhan">
+                </div>
+            </div>
         </section>
+
+        <!-- ---------------- Skills ---------------- -->
         <section id="skills">
-            <h2>Skills</h2>
-            <ol>
-                <LI>HTML(Biginner)</LI>
-                <LI>Basic problem solving</LI>
-                <li>Willing to learn CSS and JS </li>
-            </ol>
-            <h3> Programing Languages </h3>
-            <ol>
-                <li>Paython</li>
-                <li>HTML</li>
-            </ol>
+            <div class="section-content">
+                <h2>Skills</h2>
+                <ol>
+                    <li>HTML (Beginner)</li>
+                    <li>Basic Problem Solving</li>
+                    <li>Learning CSS and JavaScript</li>
+                </ol>
+                <h3>Programming Languages</h3>
+                <ol>
+                    <li>Python</li>
+                    <li>HTML</li>
+                </ol>
+            </div>
         </section>
+
+        <!-- ---------------- Portfolio ---------------- -->
         <section id="portfolio">
-            <h2>Mini Portfolio</h2>
-            <P>Here a few small projects I made</P>
-            <table border="1" cellpadding="3">
-            <thead>
-                <tr>
-                    <th>Project</th>
-                    <th>Description</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <thead>
-                <tr>
-                    <td>Simple page </Td>
-                    <Td>A HTML page with images</Td>
-                    <td><a href="/project01.html">View</a></td>
+            <div class="section-content">
+                <h2>Mini Portfolio</h2>
+                <p>Here are a few small projects I have developed:</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Project</th>
+                                <th>Description</th>
+                                <th>Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Simple Page</td>
+                                <td>A basic HTML page featuring images</td>
+                                <td><a href="/project01.html">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------------- Family ---------------- -->
+        <section id="family">
+            <div class="section-content">
+                <h2>Family</h2>
+                <p>I am fortunate to belong to a close-knit family of seven members. My parents nurture and support us with love, and they have always encouraged my academic pursuits.</p>
                 
-                </tr> 
-            </thead>
-            </table>
-        </section>
-        <section id="Family">
-            <h2>Family</h2>
-            <P>I belong to a close-knit family of 7 members. My parents take care of us with love.  My family always supports me in my studie.</P>
-            <h3>parents</h3>
-            <P>MATA & BORO MATA: MATA and BORO MATA is the boss of our house and even dad agree with that and also her sound system is much much better speakers.# hahahahaha  #love you</P>
-            <img src="/imege/ma & boro ma.jpeg" alt="MATA AND BORO MATA" height="200" width="200"> 
-            <img src="/imege/ma.jpeg" alt="MATA " height="200" width="200">
-            <p>BABA:love you for ever.</p>
-            <img src="/imege/baba.jpeg" alt="BABA" height="200" width="200">
-            <P>MACI & MASO & RUPU & ANI:Endless love for you. and aniii (Boss) enjoy every time.  </P> 
-            <img src="/imege/maci , maso.jpeg" alt="maci and maso " height="200" width="200"> 
-            <img src="/imege/rupu.jpeg" alt="rupu" height="200" width="200"> 
-            <img src="/imege/aani.jpeg" alt="aniii " height="200" width="200"> 
-            <P>MAMA: You have help me a lot. whenever we had a any problem,you were always there by side. Since childhood, you have taken great care of me.@ alawys love for me  </P>
-            <img src="/imege/mama.jpeg" alt="mama " height="200" width="200">
-            <P>
-                BIG BROTHER(Boss):Thank you vai.you alawys help me. lot of love to you. 
-            </P>
-            <img src="/imege/dada.jpeg" alt="DADA " height="200" width="200">
-            <P> VAI $ BON : vai or me fight like two dog. hahahahaha. but  bon are good. I do not told me,but i stel love you. </P>
-             <img src="/imege/dada , bon amme , vai.jpeg" alt="all " height="200" width="200">
-             <img src="/imege/famili.jpeg" alt="familly" height="200" width="200"> 
-            <p> And aslo love .. Deda, Boro mama, Dadu.........................</p> 
-         </section>
-         <section id="Friends">
-            <h2>Friends</h2>
-            <p> You guys really think I’ll write sweet things about you? hahaha. Not wasting my words. If I start writing, my whole page will get ruined 🤣 That’s why I’m only posting your names and photos.
-            And , don’t bother saying “thank you” for checking my page. Just remember — when I come home, I expect a grand biryani treat! 🍗🍛🔥 </p>
-            <p> sayan </p>
-            <img src="/imege/sayan.jpeg" alt="sayan " height="200" width="200">
-            <p> sayan vai just fun. I know you are hotest person whol world. so, just a secound, once more try.....</p>
-            <h4>sexy sayan </h4>
-            <img src="/imege/sssayan.jpeg" alt=" sexy sayan " height="200" width="200">
-            <h3>Ongker(VKL)</h3>
-            <p>I thaink its better me not to say anything about you. # hahahahahahahaha </p>
-            <img src="/imege/ong.jpeg" alt="ongker " height="200" width="200">
-            <h3>Subha</h3>
-            <p># always singal </p>
-            <img src="/imege/subhaaa.jpeg" alt="subha " height="200" width="200">
-            <h3> Ari </h3>
-            <P>come 1v1 (No ump ). 8-0 .# hahahahahahahahaha</P>
-            <h3>shom</h3>
-            <p>remember HS Exam. I think you  promisd me to give me something like- sprit, briani....... </p>
-            <h3>sankar</h3>
-            <p>.....</p>
-            <img src="/imege/school ari.jpeg" alt="ari  " height="200" width="200">
-            <h3>Suria (.) (.)</h3>
-            <P>I love "santra"</P>
-            <img src="/imege/anima suria.jpeg" alt="suriya  " height="200" width="200">
-            <h3> M. padhan , T </h3>
-            <P> IIT  is under feet.</P>
-            <p>sorry subhajit  vai I do not have nay singal pic. </p>
-            <img src="/imege/t.jpeg" alt="m,t   " height="200" width="200">
-            <img src="/imege/school group.jpeg" alt="m,t   " height="200" width="200">
-            <h4>If I even forget any friend, I am sorry </h4>
+                <h3>Parents</h3>
+                <p><strong>MATA & BORO MATA:</strong> The matriarchs of our family. Their guidance and support make our home harmonious and joyful. Their sound system is unmatched! #love #fun</p>
+                <div class="image-grid">
+                    <img src="/imege/ma & boro ma.jpeg" alt="MATA AND BORO MATA">
+                    <img src="/imege/ma.jpeg" alt="MATA">
+                </div>
 
+                <p><strong>BABA:</strong> Forever grateful for his unwavering support and love.</p>
+                <div class="image-grid">
+                    <img src="/imege/baba.jpeg" alt="BABA">
+                </div>
+
+                <p><strong>MACI, MASO, RUPU & ANI:</strong> Endless love for all of you. Anii, the boss, cherishes every moment we spend together.</p>
+                <div class="image-grid">
+                    <img src="/imege/maci , maso.jpeg" alt="MACI & MASO">
+                    <img src="/imege/rupu.jpeg" alt="RUPU">
+                    <img src="/imege/aani.jpeg" alt="ANI">
+                </div>
+
+                <p><strong>MAMA:</strong> Thank you for always being there for me. Your care and guidance since childhood mean the world to me.</p>
+                <div class="image-grid">
+                    <img src="/imege/mama.jpeg" alt="MAMA">
+                </div>
+
+                <p><strong>BIG BROTHER:</strong> Thank you for always supporting me. Your presence makes a difference in my life.</p>
+                <div class="image-grid">
+                    <img src="/imege/dada.jpeg" alt="BIG BROTHER">
+                </div>
+
+                <p><strong>VAI & BON:</strong> Though we sometimes argue, my love and appreciation for you remain unwavering.</p>
+                <div class="image-grid">
+                    <img src="/imege/dada , bon amme , vai.jpeg" alt="ALL">
+                    <img src="/imege/famili.jpeg" alt="Family">
+                </div>
+
+                <p>Special love and gratitude to Deda, Boro Mama, Dadu, and others as well.</p>
+            </div>
         </section>
-        <section id="contact" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">Contact Me</h2>
-            <p>IF anyone contact me, then fill it .</p>
-            <from action="#" method="get">
-                <fieldset>
-                    <legend>Your Details </legend>
-                    <P>
-                      <label for="name">Name:</label>
-                      <input id="name" name="name" type="text" placeholder="Your full name " required />
-                      </P>
-                      <P>
-                        <label for="email">Email</label>
-                        <input id="email" name="email" type="email" placeholder="you@gmali.com"/>
-                      </P>
-                      <P>
-                        <label for="phone">phone</label>
-                        <input id="phone" name="phone" type="tel" placeholder="+91-00000-00000"/>
-                      </P>
-                </fieldset>
-                <fieldset>
-                    <legend>Your Message</legend>
-                    <P>
-                       <label for="topic">Topic:</label>
-                         <select id="topic" name="topic">
-                        <option value="hello">Just saying hello</option>
-                        <option value="feedback">Website feedback</option>
-                        <option value="project">Project inquiry</option>
-                        </select> 
-                    </P>
-                    <P>
-                       <label for="msg">Message:</label><br />
-                       <textarea id="msg" name="message" rows="5" cols="40" placeholder="Type something nice..."></textarea> 
-                    </P>
-                    <p>
-                       <label for="city">City (with suggestions):</label>
-                       <input list="cities" id="city" name="city" placeholder="Start typing..." />
-                      <datalist id="cities">
-                       <option value="Kolkata"></option>
-                      <option value="Delhi"></option>
-                      <option value="Mumbai"></option>
-                      <option value="Chennai"></option>
-                      <option value="Bengaluru"></option>
-                      <option value="Nandigram"></option>
-                      <option value="Holdia"></option>
-                       <option value="Madinipur"></option>
-                       </datalist> 
-                    </p>
-                </fieldset>
-                <p>
-                     <button type="submit">Submit</button>
-                      <button type="reset">Reset</button>
-                </p>
+
+        <!-- ---------------- Friends ---------------- -->
+        <section id="friends">
+            <div class="section-content">
+                <h2>Friends</h2>
+                <p>Here I’m showcasing my friends along with their photos. Keep in mind, I’m not writing long descriptions, but your presence matters greatly!</p>
+                
+                <h3>Sayan</h3>
+                <p>A fun-loving friend who brings energy wherever he goes.</p>
+                <div class="image-grid">
+                    <img src="/imege/sayan.jpeg" alt="Sayan">
+                </div>
+
+                <h4>“Sexy Sayan”</h4>
+                <div class="image-grid">
+                    <img src="/imege/sssayan.jpeg" alt="Sexy Sayan">
+                </div>
+
+                <h3>Ongker (VKL)</h3>
+                <p>A friend whose presence speaks louder than words.</p>
+                <div class="image-grid">
+                    <img src="/imege/ong.jpeg" alt="Ongker">
+                </div>
+
+                <h3>Subha</h3>
+                <p>#Forever single</p>
+                <div class="image-grid">
+                    <img src="/imege/subhaaa.jpeg" alt="Subha">
+                </div>
+
+                <h3>Ari</h3>
+                <p>Always up for a fun challenge!</p>
+                <div class="image-grid">
+                    <img src="/imege/school ari.jpeg" alt="Ari">
+                </div>
+
+                <h3>Shom</h3>
+                <p>Memorable moments from HS exams and beyond.</p>
+
+                <h3>Sankar</h3>
+                <p>...</p>
+
+                <h3>Suria</h3>
+                <p>Lover of “Santra” 🍊</p>
+                <div class="image-grid">
+                    <img src="/imege/anima suria.jpeg" alt="Suria">
+                </div>
+
+                <h3>M. Padhan, T</h3>
+                <p>IIT is under feet 😄</p>
+                <p>Unfortunately, no individual photo is available for Subhajit Vai.</p>
+                <div class="image-grid">
+                    <img src="/imege/t.jpeg" alt="M. Padhan">
+                    <img src="/imege/school group.jpeg" alt="Group">
+                </div>
+
+                <h4>If I missed anyone, my apologies!</h4>
+            </div>
+        </section>
+
+        <!-- ---------------- Contact ---------------- -->
+        <section id="contact">
+            <div class="section-content">
+                <h2>Contact Me</h2>
+                <p>If you would like to reach out, please fill out the form below:</p>
+                <form action="#" method="get">
+                    <fieldset>
+                        <legend>Your Details</legend>
+                        <label for="name">Name:</label>
+                        <input id="name" name="name" type="text" placeholder="Your full name" required>
+                        <label for="email">Email:</label>
+                        <input id="email" name="email" type="email" placeholder="you@gmail.com">
+                        <label for="phone">Phone:</label>
+                        <input id="phone" name="phone" type="tel" placeholder="+91-00000-00000">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Your Message</legend>
+                        <label for="topic">Topic:</label>
+                        <select id="topic" name="topic">
+                            <option value="hello">Just saying hello</option>
+                            <option value="feedback">Website feedback</option>
+                            <option value="project">Project inquiry</option>
+                        </select>
+
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="message" rows="5" placeholder="Type something here..."></textarea>
+
+                        <label for="city">City:</label>
+                        <input list="cities" id="city" name="city" placeholder="Start typing...">
+                        <datalist id="cities">
+                            <option value="Kolkata"></option>
+                            <option value="Delhi"></option>
+                            <option value="Mumbai"></option>
+                            <option value="Chennai"></option>
+                            <option value="Bengaluru"></option>
+                            <option value="Nandigram"></option>
+                            <option value="Holdia"></option>
+                            <option value="Madinipur"></option>
+                        </datalist>
+                    </fieldset>
+
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
                 </form>
-
-                <p>
-                   Prefer direct email? Write to
-                   <a href="mailto:you@example.com">you@gmali.com</a>
-                    or call <a href="tel:+910000000000">+91- 91-00000-00000 00000</a>
-                </p>
+            </div>
         </section>
     </main>
-       <hr />
 
-     <footer>
-       <p>&copy; <time datetime="2025">2025</time> Your Name. Built with only HTML.</p>
+  <footer>
+    <div class="footer-container">
+        <p>&copy; <time datetime="2025">2025</time> Soumyadip Pradhan. All rights reserved.</p>
+
+        <p>Contact me: 
+            <a href="mailto:pradhansoumyadip00@gmail.com">
+                <i class="fas fa-envelope"></i> Email
+            </a> | 
+            <a href="tel:+919239425276">
+                <i class="fas fa-phone"></i> +91 9239425276
+            </a>
+        </p>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/your-github" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/your-instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/your-twitter" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+
         <p><a href="#top">Back to top ▲</a></p>
-    </footer>
-       </from>
-     </section>
-
-
-    </main>
-    
+    </div>
+</footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
