@@ -61,14 +61,23 @@
     }
 
     /* ---------- Hero Section ---------- */
-    .hero {
-  min-height: 100vh;
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;  /* ✅ allow vertical but prevent horizontal scroll */
+}
+
+
+.hero {
+  height: 100vh; /* exactly one screen height */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* moves content to top */
+  justify-content: flex-start;
   align-items: center;
-  padding-top: 120px; /* keeps space below navbar */
+  padding-top: 120px; /* space below navbar */
+  box-sizing: border-box;
 }
+
 
 .hero h2 {
   font-size: 3.5rem;
@@ -107,14 +116,20 @@
     }
 
     /* ---------- Scrolling Banner ---------- */
-    .scroll-banner {
-      background: yellow;
-      color: black;
-      font-weight: 600;
-      padding: 10px;
-      overflow: hidden;
-      white-space: nowrap;
-    }
+  .scroll-banner {
+  background: yellow;
+  color: black;
+  font-weight: 600;
+  padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: fixed;   /* ✅ sticks to bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+
 
     .scroll-banner span {
       display: inline-block;
@@ -127,18 +142,70 @@
     }
 
     /* ---------- Responsive ---------- */
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        gap: 10px;
-      }
+    /* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .hero h2 {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
 
-      nav a {
-        margin: 0 8px;
-        font-size: 0.9rem;
-      }
 
-    }
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 5px;
+    font-size: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .scroll-banner {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  .hero h2 {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .scroll-banner {
+    font-size: 0.8rem;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -155,8 +222,8 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h2>✨ Simple HTML Project ✨</h2>
-    <p>Built using HTML5 & CSS3 — clean, modern, and responsive.</p>
+    <h2>✨ HAVEN ✨</h2>
+    <!-- <p>Built using HTML5 & CSS3 — clean, modern, and responsive.</p> -->
   </section>
 
   <!-- Scrolling Banner -->
